@@ -1,15 +1,21 @@
 <template>
-  <div class="start">
-    <router-link :to="{ name: 'QuestionPage', params: {} }">
-      <img src="../assets/icon/start.png">
-      <p>Comenzar</p>
+  <div class="start card">
+    <router-link :to="{ name: 'question', params: { id: '1' } }">
+      <button type="button" class="btn btn-outline-success">
+        <img src="../assets/icon/start.png"><p>{{ start }}</p>
+      </button>
     </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'StartItem'
+  name: 'StartItem',
+  data(){
+    return {
+      start: 'Comenzar'
+    }
+  }
 }
 </script>
 
